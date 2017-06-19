@@ -1,0 +1,32 @@
+main article {
+    float: left;
+    width: 90%;
+    margin-top: 5vw;
+    margin-left: 5%;
+    background: rgba(0, 0, 0, 0.5);
+    color: ghostwhite;
+}
+article>span {
+    float: left;
+    width: 90%;
+    height: 60vh;
+    margin-left: 5%;
+    margin-top: 2vw;
+    overflow-y: scroll;
+}
+article span img:first-child {
+    float: left;
+    height: 25vw;
+    width: 25vw;
+    margin-right: 2vw;
+
+}
+
+
+
+article>span>img[src="../img/me1.jpg"] {
+    float: right;
+    height: 30vw;
+    width: 25vw;
+}
+

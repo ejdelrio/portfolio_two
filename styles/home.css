@@ -1,0 +1,111 @@
+#slider {
+    position: relative;
+}
+
+#slider>div {
+    position: absolute;
+    border-bottom: 1vw solid rgba(255, 255, 255, 0.5);
+    display: none;
+    height: 3vw;
+    width: 3vw;
+    top: 40%;
+    cursor: pointer;
+    transition: 350ms all;
+}
+
+
+#slider>:first-child {
+    left: 0;
+    border-left: 1vw solid rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+}
+
+#slider>:first-child:hover {
+    border-bottom: 1vw solid white;
+    border-left: 1vw solid white;
+}
+
+
+#slider>:nth-child(2){
+    right: 0;
+    border-right: 1vw solid rgba(255, 255, 255, 0.5);
+    transform: rotate(-45deg);
+}
+
+#slider>:nth-child(2):hover {
+    border-bottom: 1vw solid white;
+    border-right: 1vw solid white;
+}
+
+#slider>span {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5vw;
+    display: block;
+}
+
+
+
+#slider>span div {
+    width: 20vw;
+    height: 20vw;
+    float: left;
+    font-size: 18vw;
+
+}
+
+
+
+#slider>ul {
+    float: left;
+    width: 40%;
+    margin-left: 30%;
+    height: 5vw;
+    display: none;
+
+}
+
+#slider>ul>li {
+    float: left;
+    position: relative;
+    display: inline-block;
+    width: 1vw;
+    height: 1vw;
+    margin-left: 20%;
+    margin-top: 5%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#slider>ul>:first-child {
+    background: rgba(255, 255, 255, 1);
+}
+@media only screen and (min-width: 640px) {
+
+    #slider > :nth-child(4), #slider > :nth-child(5) {
+        display: none;
+    }
+
+    #slider > span {
+        overflow-y: scroll;
+    }
+
+    #slider > span > h3 {
+        margin-top: 2vw;
+        font-size: 2.5vw;
+    }
+
+    #slider > span > p {
+        margin-top: 1vw;
+        height: 10vw;
+    }
+
+    #slider ul {
+        display: block;
+    }
+
+    #slider:hover > div {
+        display: block;
+    }
+}
