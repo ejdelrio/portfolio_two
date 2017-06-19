@@ -15,10 +15,12 @@ header {
 
 }
 
+
 header>div {
     float: left;
     width: 10vw;
-    height: 10vw;
+    text-align: center;
+    height: 100%;
     font-size: 10vw;
     color: white;
 }
@@ -29,7 +31,6 @@ header>:nth-child(2) {
 }
 
 header>:nth-child(2)>h1 {
-    margin-left: 1vw;
     margin-top: 0.5vw;
     font-size: 5vmin;
     color: white;
@@ -38,7 +39,6 @@ header>:nth-child(2)>h1 {
 
 header>:nth-child(2)>h2 {
     font-size: 4vmin;
-    margin-left: 1vw;
     color: white;
     font-family: sans-serif;
 }
@@ -47,6 +47,8 @@ header>:nth-child(3)>nav>img {
     float: right;
     height: 8vw;
     width: 8vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
 }
 
 header>section:first-child * {
@@ -66,6 +68,7 @@ nav ul {
     position: absolute;
     margin-top: 12vw;
     color: white;
+    z-index: 1;
 }
 
 nav ul li {
@@ -117,11 +120,38 @@ main section {
 #default {
     display: block;
 }
+#slider {
+    position: relative;
+}
+
+#slider>div {
+    position: absolute;
+    border-bottom: 1vw solid white;
+    display: none;
+    height: 3vw;
+    width: 3vw;
+    top: 40%;
+}
+
+
+#slider>:first-child {
+    left: 0;
+    border-left: 1vw solid white;
+    transform: rotate(45deg);
+}
+
+
+#slider>:nth-child(2){
+    right: 0;
+    border-right: 1vw solid white;
+    transform: rotate(-45deg);
+
+}
 
 #slider>span {
     float: left;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 7vw;
     display: block;
 }
@@ -159,6 +189,7 @@ main section {
     background: whitesmoke;
 }
 
+
 @media only screen and (min-width: 640px) {
 
     header {
@@ -170,8 +201,9 @@ main section {
 
     header > div {
         height: 3.5vw;
-        width: 3.5vw;
         font-size: 3.5vw;
+        text-align: center;
+        width: 5%;
     }
 
     header > :nth-child(3) > nav > img {
@@ -205,11 +237,15 @@ main section {
         background: none;
     }
 
-    #slider>:nth-child(2), #slider>:nth-child(3) {
+    #slider>:nth-child(3), #slider>:nth-child(4) {
         display: none;
     }
 
     #slider ul {
+        display: block;
+    }
+
+    #slider:hover>div {
         display: block;
     }
 }
