@@ -3,6 +3,35 @@ body {
     background: lightpink;
 }
 
+header {
+    width: 100%;
+    height: 15vh;
+}
+
+header>img {
+    float: left;
+    width: 10%;
+    height: 6vh;
+}
+
+header:nth-child(2) {
+    float: left;
+}
+
+header>section:first-child * {
+    float: left;
+}
+
+nav {
+    width: 100%;
+    height: 20%;
+    background: palegreen;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
 main {
     width: 100%;
     height: 50em;
