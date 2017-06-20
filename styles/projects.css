@@ -1,12 +1,61 @@
+#projects a {
+    text-decoration: none;
+    color: white;
+}
+
 #projects section {
     width: 90%;
-    height: 80vh;
+    height: 60vh;
     background: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
 }
 
 #projects section>span {
-    width: 95%;
-    height: 5vw;
-    border-bottom: 1vw solid white;
+
+    float: left;
+    margin-left: 5%;
+    margin-top: 2vw;
+    width: 90%;
+    height: 20vh;
+    border-bottom: 0.5vw solid white;
+}
+
+#projects section>span h3 {
+    font-size: 4.5vw;
+}
+
+#projects section>span h4 {
+    font-size: 3vw;
+}
+
+#projects section>span p {
+    width: 100%;
+    font-size: 3.5vw;
+    margin-top: 1.5vw;
+}
+
+@media only screen and (min-width: 640px) {
+
+    #projects section {;
+        height: 60vh;
+        background: rgba(0, 0, 0, 0.5);
+        overflow-y: scroll;
+    }
+
+
+    #projects section>span {
+        height: 10vw;
+    }
+
+    #projects section>span h3 {
+        font-size: 2vw;
+    }
+
+    #projects section>span p {
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+        width: 75%;
+    }
+
+
 }
