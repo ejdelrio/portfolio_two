@@ -18,17 +18,17 @@ Repo.prototype.render = function() {
 function fetchJSON() {
         $.getJSON('https://api.github.com/users/ejdelrio/repos?callback=?').then(function(data) {
                 myRepos = dataCheck(data)
-                pullData(myRepos)
+                pushData(myRepos)
                 localStorage.myRepos = JSON.stringify(myRepos);
             },
             function(err) {
                 console.error(err)
                 myRepos = JSON.parse(localStorage.myRepos);
-                pullData(myRepos);
+                pushData(myRepos);
             });
 }
 
-function pullData(source) {
+function pushData(source) {
     source.data.forEach(ind => new Repo(ind));
     allRepos.forEach(ind => $($('#projects').children('section').append(ind.render())));
 }
