@@ -11,15 +11,24 @@
         <link rel="stylesheet" href="../styles/projects.css">
         <link rel="stylesheet" href="../styles/bio.css">
         <link rel="stylesheet" href="../styles/contact.css">
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
         <script id="project-template" type="text/x-handlebars-template">
 
             <span>
-                <a href="{{URL}}"><h3>{{name}}</h3></a>
+                <a href="{{html_url}}"><h3>{{name}}</h3></a>
                 <h4>Published on : {{created_at}}</h4>
                 <p>{{description}}</p>
             </span>
 
         </script>
+
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_XtkdkDjdBNzllWevYmHyx");
+            })();
+        </script>
+
     </head>
     <body>
         <header>
@@ -97,10 +106,8 @@
 
                     <h3>Edwin "Eddie" Del Rio</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consecte</p>
-                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!</p>
-
                     <img src="../img/me1.jpg">
-                    <p></p>
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!</p>
                     <h4>Hobbies</h4>
 
                     <ul>
@@ -111,15 +118,16 @@
                         <li>Eating</li>
                         <li>Coding</li>
                     </ul>
-
-                    <img src="../img/squirrell.jpg"
                 </span>
             </article>
 
         </main>
 
         <main id="contact">
+            <form>
 
+
+            </form>
         </main>
         <footer>
             <ul>
@@ -131,7 +139,6 @@
     <script src="../scripts/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script src="../scripts/slider.js"></script>
-    <script src="../scripts/repoObjects.js"></script>
     <script src="../scripts/singlePage.js"></script>
     <script src="../scripts/tabs.js"></script>
     <script src="../scripts/projects.js"></script>

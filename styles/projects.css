@@ -1,3 +1,5 @@
+
+
 #projects a {
     text-decoration: none;
     color: white;
@@ -6,6 +8,7 @@
 #projects section {
     width: 90%;
     height: 60vh;
+    margin-top: 8vh;
     background: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
 }
@@ -26,6 +29,7 @@
 
 #projects section>span h4 {
     font-size: 3vw;
+    margin-top: 1vh;
 }
 
 #projects section>span p {
@@ -36,10 +40,11 @@
 
 @media only screen and (min-width: 640px) {
 
-    #projects section {;
+    #projects section {
         height: 60vh;
         background: rgba(0, 0, 0, 0.5);
         overflow-y: scroll;
+        margin-top: 15vh;
     }
 
 

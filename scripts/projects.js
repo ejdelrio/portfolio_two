@@ -1,6 +1,7 @@
 'use strict';
 
 var allRepos = [];
+var myRepos;
 
 function Repo(repoObject) {
     Object.keys(repoObject).forEach(key => this[key] = repoObject[key])
@@ -13,12 +14,31 @@ Repo.prototype.render = function() {
     return template(this);
 };
 
-var myRepos;
 
-$.getJSON('https://api.github.com/users/ejdelrio/repos?callback=?').then(function(data){
-        myRepos = data;
-        myRepos.data.forEach(ind => new Repo(ind));
-        allRepos.forEach(ind => $($('#projects').children('section').append(ind.render())));},
-        err => console.error(err));
+function fetchJSON() {
+        $.getJSON('https://api.github.com/users/ejdelrio/repos?callback=?').then(function(data) {
+                myRepos = dataCheck(data)
+                pullData(myRepos)
+                localStorage.myRepos = JSON.stringify(myRepos);
+            },
+            function(err) {
+                console.error(err)
+                myRepos = JSON.parse(localStorage.myRepos);
+                pullData(myRepos);
+            });
+}
 
+function pullData(source) {
+    source.data.forEach(ind => new Repo(ind));
+    allRepos.forEach(ind => $($('#projects').children('section').append(ind.render())));
+}
 
+function dataCheck(data) {
+    if(localStorage.myRepos) {
+        return JSON.parse(localStorage.myRepos).meta.ETag === data.meta.ETag ? JSON.parse(localStorage.myRepos) : data;
+    } else {
+        return data
+    }
+}
+
+fetchJSON();
