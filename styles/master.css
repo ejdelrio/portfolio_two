@@ -157,13 +157,13 @@ footer img {
   }
 
   header {
-      height: 3.5vw;
+      height: 4vmax;
       position: absolute;
       color: white;
   }
 
   header > div {
-      height: 3.5vw;
+      height: 100%;
       font-size: 3.5vw;
       text-align: center;
       width: 5%;
@@ -181,8 +181,13 @@ footer img {
       font-size: 2vmin;
   }
 
+  nav {
+    width: 60%;
+    float: left;
+  }
+
   nav ul {
-      width: 75%;
+      width: 100%;
       display: block;
       position: static;
       margin-top: 0;
