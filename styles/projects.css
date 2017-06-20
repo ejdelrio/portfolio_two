@@ -51,6 +51,11 @@
         font-size: 2vw;
     }
 
+    #projects section>span h4 {
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+    }
+
     #projects section>span p {
         font-size: 1.5vw;
         margin-top: 0.5vw;
