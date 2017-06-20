@@ -1,54 +1,54 @@
 #contact>form {
-    width: 90%;
-    height: 70vh;
-    float: left;
-    margin-left: 5%;
-    margin-top: 6vh;
-    background: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  height: 70vh;
+  float: left;
+  margin-left: 5%;
+  margin-top: 6vh;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 #contact>form>h3 {
-    margin-left: 5%;
-    margin-top: 2vh;
-    color: white;
+  margin-left: 5%;
+  margin-top: 2vh;
+  color: white;
 }
 
 #contact>form>input, #contact>form>textarea {
-    float: left;
-    width: 60%;
-    margin-left: 5%;
-    margin-top: 2vh;
-    transition: 350ms all;
-    border-radius: 5px;
+  float: left;
+  width: 60%;
+  margin-left: 5%;
+  margin-top: 2vh;
+  transition: 350ms all;
+  border-radius: 5px;
 }
 
 #contact>form>textarea {
-    width: 90%;
-    height: 50%;
+  width: 90%;
+  height: 50%;
 }
 
 #contact>form>input:focus {
-    width: 90%;
-    background: black;
-    color: white;
+  width: 90%;
+  background: black;
+  color: white;
 }
 
 #contact>form>button {
-    width: 15%;
-    float: left;
-    margin-left: 5%;
-    margin-top: 2vh;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    border: none;
+  width: 15%;
+  float: left;
+  margin-left: 5%;
+  margin-top: 2vh;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  border: none;
 }
 
 @media only screen and (min-width: 640px) {
-    #contact>form {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 15vh;
-    }
+  #contact>form {
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 15vh;
+  }
 
 }
