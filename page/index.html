@@ -12,7 +12,13 @@
         <link rel="stylesheet" href="../styles/bio.css">
         <link rel="stylesheet" href="../styles/contact.css">
         <script id="project-template" type="text/x-handlebars-template">
-            <!-- template HTML goes here -->
+
+            <span>
+                <a href="{{URL}}"><h3>{{name}}</h3></a>
+                <h4>Published on : {{created_at}}</h4>
+                <p>{{description}}</p>
+            </span>
+
         </script>
     </head>
     <body>
@@ -25,6 +31,7 @@
             <section>
                 <nav>
                     <img src="../img/list-512.png">
+
                     <ul>
                         <li>
                             <p>Home</p>
@@ -39,6 +46,7 @@
                             <p>Contact</p>
                         </li>
                     </ul>
+
                 </nav>
             </section>
         </header>
@@ -86,12 +94,15 @@
             <article>
                 <span>
                     <img src="../img/me4.jpg">
+
                     <h3>Edwin "Eddie" Del Rio</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consecte</p>
                     <p>orem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem corporis, cum cumque cupiditate dignissimos ducimus fugit, ipsum iusto minus molestiae molestias nobis numquam quaerat qui quibusdam ullam unde voluptas!</p>
+
                     <img src="../img/me1.jpg">
                     <p></p>
                     <h4>Hobbies</h4>
+
                     <ul>
                         <li>Playing Guitar</li>
                         <li>Bicycle Riding</li>
@@ -100,6 +111,7 @@
                         <li>Eating</li>
                         <li>Coding</li>
                     </ul>
+
                     <img src="../img/squirrell.jpg"
                 </span>
             </article>
@@ -109,13 +121,20 @@
         <main id="contact">
 
         </main>
-        <footer></footer>
+        <footer>
+            <ul>
+                <li><a href="https://www.facebook.com/edwin.delrio.96"><img src="../img/fb.png"></a></li>
+                <li><a href="https://www.github.com/ejdelrio"><img src="../img/gh.png"></a></li>
+            </ul>
+        </footer>
     </body>
     <script src="../scripts/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-    <script src="../scripts/app.js"></script>
     <script src="../scripts/slider.js"></script>
+    <script src="../scripts/repoObjects.js"></script>
     <script src="../scripts/singlePage.js"></script>
     <script src="../scripts/tabs.js"></script>
+    <script src="../scripts/projects.js"></script>
+
 
 </html>
