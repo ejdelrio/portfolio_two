@@ -45,4 +45,4 @@ var app = app || {};
   }
 
   fetchJSON();
-})(window);
+})(app);
