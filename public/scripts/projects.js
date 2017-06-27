@@ -33,7 +33,7 @@ var app = app || {};
 
   function pushData(source) {
     source.data.forEach(ind => new Repo(ind));
-    allRepos.forEach(ind => $($('#projects').children('section').append(ind.render())));
+    allRepos.reduce((inc,ind) => $($('#projects').children('section').append(ind.render())), 0);
   }
 
   function dataCheck(data) {
