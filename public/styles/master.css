@@ -2,6 +2,11 @@
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   background: url("../img/background.jpg");
   background-size: cover;
