@@ -76,7 +76,7 @@ nav ul {
 }
 
 nav ul li {
-  height: 20vw;
+  height: 7vh;
   display: block;
   position: relative;
   float: left;
@@ -103,6 +103,7 @@ nav ul li p {
 
 nav ul li:hover p {
   border-bottom: .25vw solid black;
+  color: black;
 }
 
 nav:hover ul {
@@ -162,7 +163,7 @@ footer img {
   }
 
   header {
-      height: 4vmax;
+      height: 7vh;
       position: absolute;
       color: white;
   }
@@ -179,11 +180,11 @@ footer img {
   }
 
   header>:nth-child(2)>h1 {
-      font-size: 3vmin;
+      font-size: 3vh;
   }
 
   header>:nth-child(2)>h2 {
-      font-size: 2vmin;
+      font-size: 2vh;
   }
 
   nav {
