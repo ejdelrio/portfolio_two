@@ -19,11 +19,8 @@ var app = app || {};
   };
 
   function fetchJSON() {
-    $.ajax({
-      url:'https://api.github.com/users/ejdelrio/repos',
-      method:'GET',
-      headers:{'Authorization': 'token ' + GITHUB_TOKEN}
-    }).then(function(data) {
+    $.get('/github/user/repos')
+    .then(function(data) {
       console.log(data);
       myRepos = dataCheck(data);
       pushData(myRepos);
