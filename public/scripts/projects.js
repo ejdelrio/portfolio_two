@@ -22,7 +22,7 @@ var app = app || {};
     $.ajax({
       url:'https://api.github.com/users/ejdelrio/repos',
       method:'GET',
-      headers:{'Authorization': 'token ' + githubToken}
+      headers:{'Authorization': 'token ' + GITHUB_TOKEN}
     }).then(function(data) {
       console.log(data);
       myRepos = dataCheck(data);
