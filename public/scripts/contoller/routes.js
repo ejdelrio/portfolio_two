@@ -1,24 +1,24 @@
 'use strict';
 
-var app = app||{};
-
-var navTabs = $('nav').find('li');
-
+//var app = app||{};
 
 function navHandler() {
+  $('nav p').each((_, ele) => {
+    let target = $(ele).text().toLowerCase();
 
-  navTabs.each((ind, ele) => {
-    let target = $($(ele).find('p')).text();
-    console.log(`/${target.toLowerCase()}`);
-    page(`/${target.toLowerCase()}`, ()=>{
-      $('#' + target.toLowerCase()).show();
-      $(navTabs.find('p')).filter((ind, tag) => $(tag).text() !== target).each((ind, tag) =>
-        $(`#${$(tag).text().toLowerCase()}`).hide());
+    page(`/${target}`, () => {
+      $('main').hide();
+      $(`#${target}`).show();
     });
   });
-
-
 }
+
+function notFound() {
+  page('*', function(){
+    $('body').text('Not found!');
+  });
+}
+
 
 navHandler();
 page();

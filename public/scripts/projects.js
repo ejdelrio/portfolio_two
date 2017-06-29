@@ -19,7 +19,12 @@ var app = app || {};
   };
 
   function fetchJSON() {
-    $.getJSON('https://api.github.com/users/ejdelrio/repos?callback=?').then(function(data) {
+    $.ajax({
+      url:'https://api.github.com/users/ejdelrio/repos',
+      method:'GET',
+      headers:{'Authorization': 'token ' + githubToken}
+    }).then(function(data) {
+      console.log(data);
       myRepos = dataCheck(data);
       pushData(myRepos);
       localStorage.myRepos = JSON.stringify(myRepos);
@@ -38,7 +43,7 @@ var app = app || {};
 
   function dataCheck(data) {
     if(localStorage.myRepos) {
-      return JSON.parse(localStorage.myRepos).meta.ETag === data.meta.ETag ? JSON.parse(localStorage.myRepos) : data;
+      return JSON.parse(localStorage.myRepos);
     } else {
       return data;
     }
