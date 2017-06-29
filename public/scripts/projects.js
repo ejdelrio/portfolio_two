@@ -44,7 +44,7 @@ var app = app || {};
   //   } else {
   //     return data;
   //   }
-  }
+  // }
 
   fetchJSON();
 })(app);
