@@ -21,7 +21,7 @@ var app = app || {};
   function fetchJSON() {
     $.get('/github/user/repos')
     .then(function(data) {
-      console.log(data);
+      console.log('Repos: ', data);
       myRepos = dataCheck(data);
       pushData(myRepos);
       localStorage.myRepos = JSON.stringify(myRepos);
