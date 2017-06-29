@@ -22,7 +22,7 @@ var app = app || {};
     $.get('/github/user/repos')
     .then(function(data) {
       console.log('Repos: ', data);
-      // myRepos = dataCheck(data);
+      myRepos = dataCheck(data);
       pushData(myRepos);
       localStorage.myRepos = JSON.stringify(myRepos);
     },
@@ -34,17 +34,17 @@ var app = app || {};
   }
 
   function pushData(source) {
-    source.data.forEach(ind => new Repo(ind));
+    source.forEach(ind => new Repo(ind));
     allRepos.reduce((inc,ind) => $($('#projects').children('section').append(ind.render())), 0);
   }
 
-  // function dataCheck(data) {
-  //   if(localStorage.myRepos) {
-  //     return JSON.parse(localStorage.myRepos);
-  //   } else {
-  //     return data;
-  //   }
-  // }
+  function dataCheck(data) {
+    if(localStorage.myRepos) {
+      return JSON.parse(localStorage.myRepos);
+    } else {
+      return data;
+    }
+  }
 
   fetchJSON();
 })(app);
